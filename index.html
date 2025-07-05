@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice Application</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Invoice Generator</h1>
+
+        <!-- Company/Customer Information -->
+         <div class="info-section">
+            <h2>Company Info</h2>
+            <input id="companyName" placeholder="Company Name">
+            <input id="companyAddress" placeholder="Address">
+
+            <h2>Customer Info</h2>
+            <input id="customerName" placeholder="Customer Name">
+            <input id="customerEmail" placeholder="Email">
+         </div>
+
+         <!-- Invoice table -->
+          <table id="invoice-table">
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Qty</th>
+                    <th>price</th>
+                    <th>Total</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+          </table>
+
+          <button onclick="addRow()">+ Add Item</button>
+
+          <!-- Summary -->
+           <div class="Summary">
+            <p>Subtotal: $<span id="Subtotal">0.00</span></p>
+            <p>Tax (10%): $<span id="tax">0.00</span></p>
+            <h2>Total: $<span id="total">0.00</span></h2>
+           </div>
+
+           <!-- Action buttons -->
+            <div class="actions">
+                <button onclick="savePDF()">📃 Save as PDF</button>
+                <button onclick="saveInvoice()">📼  Save Invoice</button>
+                <button onclick="downloadJSON()">⬇️  Download JSON</button>
+                <button onclick="downloadCSV()">  📩Export CSV</button>
+            </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
