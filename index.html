@@ -32,13 +32,16 @@
                     <th>Action</th>
                 </tr>
             </thead>
+            <tbody id="invoice-body">
+                <!-- Rows will be added dynamically -->
+            </tbody>
           </table>
 
           <button onclick="addRow()">Add Item</button>
 
           <!-- Summary -->
            <div class="Summary">
-            <p>Subtotal: $<span id="Subtotal">0.00</span></p>
+            <p>Subtotal: $<span id="subtotal">0.00</span></p>
             <p>Tax (10%): $<span id="tax">0.00</span></p>
             <h2>Total: $<span id="total">0.00</span></h2>
            </div>
